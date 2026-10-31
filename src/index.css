@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-cream-bg: #F7F3EB;
+  --color-cream-card: #FFFDF9;
+  --color-cream-court: #F2EBD9;
+}
+
+body {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  background-color: #F7F3EB;
+  color: #221E1B;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F2EBD9;
+}
+::-webkit-scrollbar-thumb {
+  background: #C8B294;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A68D6E;
+}
+
+/* Tap feedback active styles */
+.tap-score-active:active {
+  transform: scale(0.985);
+}
+
+/* Court court line animations */
+@keyframes courtPulse {
+  0%, 100% { opacity: 0.9; }
+  50% { opacity: 0.4; }
+}
+
+.animate-court-pulse {
+  animation: courtPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
